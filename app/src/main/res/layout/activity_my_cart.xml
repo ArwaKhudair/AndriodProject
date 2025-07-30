@@ -1,32 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fae5f9"
     tools:context=".MyCart">
 
-   <ImageView
-       android:id="@+id/arrow"
-       android:layout_width="30dp"
-       android:layout_height="30dp"
-       android:src="@drawable/arrow"
-       android:layout_marginTop="30dp"
-       android:layout_marginLeft="30dp"
-       android:background="#fae5f9"
-       />
-    <TextView
-        android:id="@+id/my_cart"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Cart"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
-        android:textSize="30dp"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/black" />
+        android:paddingStart="20dp"
+        android:paddingTop="30dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#fae5f9"
+            android:src="@drawable/arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/my_cart"
+            app:layout_constraintHorizontal_bias="0.158"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/my_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="184dp"
+            android:text="My Cart"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <RelativeLayout
         android:id="@+id/relative1"
@@ -213,11 +229,11 @@
         android:layout_marginTop="10dp"
         android:background="@color/white"
         >
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/linear1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
             android:background="#fae5f9"
@@ -245,11 +261,11 @@
                 android:layout_width="40dp"
                 android:layout_height="30dp"
                 android:src="@drawable/images"
-               android:layout_marginLeft="310dp"
+               android:layout_marginLeft="85dp"
                 android:layout_marginTop="18dp"
-                android:layout_marginRight="20dp"
+
                 />
-        </RelativeLayout>
+        </LinearLayout>
 
     <TextView
         android:id="@+id/subtotal"
@@ -345,4 +361,4 @@
 
     </RelativeLayout>
 
-</RelativeLayout>
+</LinearLayout>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public class splash_screen extends AppCompatActivity {
             return insets;
         });
         ImageView i = findViewById(R.id.splach);
+        Toast.makeText(this, "اضغط على الصورة للمتابعة", Toast.LENGTH_SHORT).show();
 
         i.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -9,28 +9,41 @@
     tools:context=".MainActivity2">
 
 
-
-    <ImageView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/arrow"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/arrow"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="30dp"
-        android:background="#fae5f9"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:background="#fae5f9"
+            android:src="@drawable/arrow"
+            app:layout_constraintEnd_toStartOf="@+id/title_lakme"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/title_lakme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lakmé"
-            android:layout_marginTop="70dp"
+            android:textColor="@color/black"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:textSize="30dp"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/black" />
-
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <EditText
+
         android:id="@+id/search"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
@@ -52,6 +65,9 @@
         android:layout_marginRight="0dp"
         android:background="#fae5f9"
         />
+
+
+
     <RelativeLayout
         android:id="@+id/relative1"
         android:layout_width="190dp"

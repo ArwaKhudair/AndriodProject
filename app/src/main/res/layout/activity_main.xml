@@ -45,149 +45,186 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="300dp"
         />
-    <EditText
-        android:id="@+id/search"
-        android:layout_width="280dp"
+
+
+    <!-- All Brands -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/image"
-        android:hint="Search"
-        android:background="@color/white"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:padding="15dp"
-        />
-    <ImageView
-        android:id="@+id/icon"
-        android:layout_width="150dp"
-        android:layout_height="55dp"
-        android:src="@drawable/search"
-        android:layout_below="@id/image"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginRight="0dp"
-        android:background="#fae5f9"
-        />
+        android:layout_below="@+id/Alina"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        >
 
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:background="@color/white"
+            android:hint="Search"
+            android:padding="15dp" />
 
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="90dp"
+            android:layout_height="55dp"
+            android:background="#fae5f9"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/search" />
+    </LinearLayout>
 
-
-    <!--     All Brand    -->
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linear"
         android:layout_width="wrap_content"
         android:layout_height="160dp"
-        android:layout_below="@+id/icon"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
-        android:background="@color/white"
-       >
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="22dp"
+        android:background="@color/white">
+
+
         <TextView
             android:id="@+id/All_brands"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="All Brands"
-            android:textStyle="bold"
-            android:textSize="18sp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="20dp"
-            android:textColor="@color/black" />
+            android:text="All Brands"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
         <TextView
             android:id="@+id/see_all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
             android:text="See All"
             android:textColor="#5D565B"
-            android:layout_marginLeft="310dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="15dp"
             android:textSize="14sp"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
         <ImageView
             android:id="@+id/lakme"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/lakme1"
-            android:background="#F2F1F1"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="55dp"
-            android:layout_marginLeft="30dp"
-          />
+            android:background="#F2F1F1"
+            android:src="@drawable/lakme1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/text_lakme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:text="Lakmé"
-            android:layout_below="@+id/lakme"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="40dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/lakme"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/lakme"
+            app:layout_constraintTop_toBottomOf="@+id/lakme" />
+
+
         <ImageView
             android:id="@+id/Olay"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/olay_1"
-            android:background="#F2F1F1"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="55dp"
-            android:layout_marginLeft="115dp"
-            />
+            android:background="#F2F1F1"
+            android:src="@drawable/olay_1"
+            app:layout_constraintStart_toEndOf="@+id/lakme"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:text="Olay"
-            android:layout_below="@+id/Olay"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="135dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/Olay"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/Olay"
+            app:layout_constraintTop_toBottomOf="@+id/Olay" />
+
+
         <ImageView
             android:id="@+id/Loreal"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/loreal"
-            android:background="#F2F1F1"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="55dp"
-            android:layout_marginLeft="200dp"
-            />
+            android:background="#F2F1F1"
+            android:src="@drawable/loreal"
+            app:layout_constraintStart_toEndOf="@+id/Olay"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:text="Loreal"
-            android:layout_below="@+id/Loreal"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="215dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/Loreal"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/Loreal"
+            app:layout_constraintTop_toBottomOf="@+id/Loreal" />
+
+
         <ImageView
             android:id="@+id/Nyx"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/nyx"
-            android:background="#F2F1F1"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="55dp"
-            android:layout_marginLeft="285dp"
-            />
+            android:background="#F2F1F1"
+            android:src="@drawable/nyx"
+            app:layout_constraintStart_toEndOf="@+id/Loreal"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:text="Nyx"
-            android:layout_below="@+id/Nyx"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="305dp"
-            android:textColor="@color/black" />
-    </RelativeLayout>
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/Nyx"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/Nyx"
+            app:layout_constraintTop_toBottomOf="@+id/Nyx" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Flash Sale"
         android:layout_below="@+id/linear"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:text="Flash Sale"
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:textStyle="bold"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-        />
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/see_more"
         android:layout_width="wrap_content"
@@ -199,77 +236,77 @@
         android:layout_marginTop="50dp"
         android:textSize="16sp"
         />
-        <RelativeLayout
-            android:id="@+id/relative1"
-            android:layout_width="190dp"
-            android:layout_height="190dp"
-            android:layout_below="@+id/see_more"
-            android:orientation="vertical"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="10dp"
-            android:background="@color/white"
-            >
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_below="@+id/see_more"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:background="@color/white"
+        >
 
-            <ImageView
-                android:id="@+id/Unreal_Blur"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:src="@drawable/unreal"
-                android:background="#fae5f9"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                />
-            <TextView
-                android:id="@+id/Ureal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ureal Blur perfect"
-                android:textColor="@color/black"
-                android:layout_below="@+id/Unreal_Blur"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                />
-            <Button
-                android:id="@+id/buy"
-                android:layout_width="76dp"
-                android:layout_height="40dp"
-                android:text="Buy Now"
-                android:backgroundTint="#d209b5"
-                android:layout_below="@+id/Unreal_Blur"
-                android:textSize="10dp"
-                android:layout_marginLeft="107dp"
-                android:textColor="@color/white"
-                android:textAllCaps="false"
-                android:layout_marginTop="30dp"
-                />
-            <TextView
-                android:id="@+id/series"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$15.00"
-                android:textColor="@color/black"
-                android:layout_below="@+id/Ureal"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                />
-            <TextView
-                android:id="@+id/series1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$20.00"
-                android:textColor="#7675"
-                android:layout_below="@+id/Ureal"
-                android:layout_marginLeft="55dp"
-                android:layout_marginTop="10dp"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                />
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/Unreal_Blur"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/unreal"
+            android:background="#fae5f9"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            />
+        <TextView
+            android:id="@+id/Ureal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ureal Blur perfect"
+            android:textColor="@color/black"
+            android:layout_below="@+id/Unreal_Blur"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+        <Button
+            android:id="@+id/buy"
+            android:layout_width="76dp"
+            android:layout_height="40dp"
+            android:text="Buy Now"
+            android:backgroundTint="#d209b5"
+            android:layout_below="@+id/Unreal_Blur"
+            android:textSize="10dp"
+            android:layout_marginLeft="107dp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:id="@+id/series"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$15.00"
+            android:textColor="@color/black"
+            android:layout_below="@+id/Ureal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/series1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$20.00"
+            android:textColor="#7675"
+            android:layout_below="@+id/Ureal"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
     <RelativeLayout
         android:id="@+id/ralative2"
         android:layout_width="190dp"
@@ -279,7 +316,7 @@
         android:layout_marginLeft="210dp"
         android:layout_marginTop="30dp"
         android:background="@color/white"
-     >
+        >
 
         <ImageView
             android:id="@+id/total_effect"
